@@ -14,6 +14,7 @@ global RunAny_Plugins_Version:="1.0.0"
 ;win+c和win+v替代ctrl+insert和 shift+insert
 #c::
 Send, {Ctrl Down}{Insert}{Ctrl Up}
+Send, {Win Up} ; 为了防止win键没被释放。 ----似乎是AHK的一个坑!!!
 return
 
 #v::
