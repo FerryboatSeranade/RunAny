@@ -18,6 +18,7 @@ return
 
 #v::
 Send, {Shift Down}{Insert}{Shift Up}
+Send, {Win Up} ; 为了防止win键没被释放。 ----似乎是AHK的一个坑!!!
 return
 
 ;win+s 复制并且搜索!!! 要是有可选项那就更棒了!//todo
@@ -34,6 +35,7 @@ if(1==Instr(clipboard,"http")){ ; 要做trim操作!
 }else{
     run https://www.google.com/search?q=%Clipboard%
 }
+Send, {Win Up}
 return
 
 
