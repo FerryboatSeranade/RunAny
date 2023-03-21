@@ -20,6 +20,23 @@ return
 Send, {Shift Down}{Insert}{Shift Up}
 return
 
+;win+s 复制并且搜索!!! 要是有可选项那就更棒了!//todo
+#s::
+clipboard :=
+Send, {ctrl down}{insert}{ctrl up}
+;MsgBox, %clipboard%
+; ToolTip, %clipboard%
+clipwait
+if(1==Instr(clipboard,"http")){ ; 要做trim操作!
+    run %clipboard%
+}else if(RegExMatch(clipboard,"^[CDEFGH]:")){
+    run explore %clipboard%
+}else{
+    run https://www.google.com/search?q=%Clipboard%
+}
+return
+
+
 /*
 #[::
 Send, #P
