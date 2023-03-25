@@ -12,4 +12,5 @@ salad_dict_query:
     Send, ^c
     Sleep, 200
     Send, %shortcut%
+    Send, {Alt Up}
 Return
